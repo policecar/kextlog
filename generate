@@ -26,7 +26,8 @@ cp /var/log/kernel.log.*.bz2 $BASE
 bunzip2 $PREFIX.*.bz2
 
 parselog $PREFIX
-for ((i = 0; i <= 5; i++)); do
+i_max=$(ls -l $BASE | grep kernel.log. | wc -l)
+for ((i = 0; i < $i_max - 1; i++)); do
   parselog $PREFIX.$i
 done
 

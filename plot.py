@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 from math import *
 import matplotlib.pyplot as plt
